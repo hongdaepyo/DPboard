@@ -30,6 +30,7 @@ public class BoardRepositoryTest {
 		
 		//then
 		Board sampleBoard = board.get(0);
+		
 		assertThat(sampleBoard).isNotNull();
 		assertThat(sampleBoard.getName()).isEqualTo("테스터");
 	}
