@@ -8,15 +8,14 @@ spring:
     template-resolver-order: 0
   resources: 
     static-locations: classpath:static/
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate.ddl-auto: update # create-drop
+    show-sql: true
   datasource:
-    h2:
-      console:
-         enabled: true
-    jpa:
-      hibernate.ddl-auto: update # create-drop
-      show-sql: true
-    datasource:
-      url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
