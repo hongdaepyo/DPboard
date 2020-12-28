@@ -1,10 +1,21 @@
 var main = {
-	init : function () {
+	init : function() {
 		var _this = this;
 		this.getBoardList();
 	},
-	getBoardList() {
-		var url = "/board/all";
-		var response = 
+	getBoardList : function() {
+		var _this = this;
+		$.ajax({
+			method: "GET",
+			url: "/board/all",
+			success: function(result) {
+				console.log(result);
+			},
+			error: function() {
+				alert("오류가 발생했습니다.");
+			}
+		})
 	}
 }
+
+main.init();
